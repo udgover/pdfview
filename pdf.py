@@ -57,8 +57,7 @@ class PDF(QWidget, Script):
 
 
 class pdf(Module):
-  """Show text file content
-ex:cat /myfile.txt"""
+  """Show first page of a pdf file"""
   def __init__(self):
     Module.__init__(self, "pdf", PDF)
     self.conf.addArgument({"name": "file",
@@ -69,5 +68,5 @@ ex:cat /myfile.txt"""
  	                   "description": "managed mime type",
  	                   "values": ["PDF"]})
     self.tags = "Viewers"
-    self.flags = ["console", "gui"]
+    self.flags = ["gui"]
     self.icon = ":text"	
